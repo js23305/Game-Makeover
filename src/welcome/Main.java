@@ -126,8 +126,7 @@ public class Main {
         genderNameMap.put("Jade","Male");
         genderNameMap.put("Jonas","Male");
         genderNameMap.put("Lina","Female");
-
-
+        
         // Return the year associated with the country
         return genderNameMap.getOrDefault(name, "no gender found"); // default to 0 if country not found
         
