@@ -1,4 +1,5 @@
 public class StoryCharacter{
+   
     String name;
     String gender;
     int hands;
