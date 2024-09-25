@@ -5,7 +5,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Main {
-
     public static void main(String[] args) {
         System.out.println("Hello there and welcome to jasmine makeover");
 
@@ -17,6 +16,8 @@ public class Main {
 
         newScanner.close();
         
+        // Initilizing the class story
+        
         Story newStory = new Story();
         String country = GetRandomCountry();
         newStory.country = country ;
@@ -24,6 +25,8 @@ public class Main {
         newStory.numberOfCharacters = GetAmountOfCharacterForCountry(country);
 
         System.out.println("Welcome to " + newStory.country + " in the year " + newStory.year + " the number of characters in the country is " + newStory.numberOfCharacters );
+
+       // Initilizing the class storyCharacter
 
         StoryCharacter newStorycharacter = new StoryCharacter();
         String name = GetNameForCountry(country);
@@ -36,19 +39,19 @@ public class Main {
         newStorycharacter.eye_color = GetEyeColorForName(name);
         newStorycharacter.body_type = BodyTypeForName(name);
         newStorycharacter.skin_tone = GetSkinToneForName(name);
+        
         // Set clothing style based on gender
-    if (newStorycharacter.gender.equals("Male")) {
-        newStorycharacter.clothing_style = "white shirt and white shorts";
-}   else if (newStorycharacter.gender.equals("Female")) {
-        newStorycharacter.clothing_style = "white skirt";
-}   else {
-        newStorycharacter.clothing_style = "white skirt"; // Optional: Handle other cases or defaults
-}
-    System.out.println("Name of the character is " + newStorycharacter.name + " and " + newStorycharacter.name);
+        if (newStorycharacter.gender.equals("Male")) {
+        newStorycharacter.clothing_style = "white shirt and white shorts";}
+        else if (newStorycharacter.gender.equals("Female")) {
+        newStorycharacter.clothing_style = "white skirt";}
+        else {
+        newStorycharacter.clothing_style = "white skirt";} // Optional: Handle other cases or defaults
 
+        System.out.println("Name of the character is " + newStorycharacter.name + " and " + newStorycharacter.name);
     }
 
-    
+    // Creating function to get random country
 
     public static String GetRandomCountry() {
         
@@ -60,14 +63,12 @@ public class Main {
         
         Random random = new Random();
         int index = random.nextInt(possibleCountries.size());
+        
         return possibleCountries.get(index);
-
-  
     }
 
-
-
     // Map each country to a specific year
+    
     public static int GetYearForCountry(String country) {
         Map<String, Integer> countryYearMap = new HashMap<>();
         countryYearMap.put("United Kingdom", 2012);
@@ -79,17 +80,20 @@ public class Main {
         return countryYearMap.getOrDefault(country, 0); // default to 0 if country not found
     }
 
-    // Map each country to a specific year
+    // Map each country to a specific amount of character
     public static int GetAmountOfCharacterForCountry(String country) {
+        
         Map<String, Integer> countryAmountOfCharacterMap = new HashMap<>();
         countryAmountOfCharacterMap.put("United Kingdom", 2);
         countryAmountOfCharacterMap.put("India", 4);
         countryAmountOfCharacterMap.put("France", 3);
         countryAmountOfCharacterMap.put("Germany",2);
 
-        // Return the year associated with the country
+        // Return the amount of character associated with the country
         return countryAmountOfCharacterMap.getOrDefault(country, 0); // default to 0 if country not found
     }
+
+    // Map each name with specific country
 
     public static String GetNameForCountry(String country) {
         
@@ -106,12 +110,13 @@ public class Main {
         nameCountryMap.put("Germany" , "Jonas");
         nameCountryMap.put("Germany" , "Lina");
 
-
-        // Return the year associated with the country
+        // Return the name associated with the country
         return nameCountryMap.getOrDefault(country, "Name not found"); // default to 0 if country not found
         
     }
 
+    // Map each name with gender
+    
     public static String GetGenderForName(String name) {
         
         Map<String, String> genderNameMap = new HashMap<>();
@@ -127,10 +132,12 @@ public class Main {
         genderNameMap.put("Jonas","Male");
         genderNameMap.put("Lina","Female");
         
-        // Return the year associated with the country
+        // Return the gender associated with the name
         return genderNameMap.getOrDefault(name, "no gender found"); // default to 0 if country not found
         
     }
+
+    // Map each height with specific name
 
     public static Double GetHeightForName(String name) {
         
@@ -147,11 +154,12 @@ public class Main {
         nameCountryMap.put("Jonas",5.10);
         nameCountryMap.put("Lina",5.5);
 
-
-        // Return the year associated with the country
+        // Return the height associated with the name
         return nameCountryMap.getOrDefault(name, (double) 0); // default to 0 if country not found
         
     }
+
+    // Map each name with specific hair color
 
     public static String GetHairColorForName(String name) {
         
@@ -168,12 +176,13 @@ public class Main {
         haircolorNameMap.put("Jonas","Light Brown");
         haircolorNameMap.put("Lina","Brown");
 
-
-        // Return the year associated with the country
+        // Return the hair clor associated with the name
         return haircolorNameMap.getOrDefault(name, "no hair color"); // default to 0 if country not found
         
     }
 
+    // Map each eye color with specific name
+    
     public static String GetEyeColorForName(String name) {
         
         Map<String, String> eyecolorNameMap = new HashMap<>();
@@ -189,11 +198,12 @@ public class Main {
         eyecolorNameMap.put("Jonas","Light Brown");
         eyecolorNameMap.put("Lina","Brown");
 
-
-        // Return the year associated with the country
+        // Return the eye color associated with the name
         return eyecolorNameMap.getOrDefault(name, "no eye color"); // default to 0 if country not found
         
     }
+
+    // Map each body type with specific name
 
     public static String BodyTypeForName(String name) {
         
@@ -211,10 +221,12 @@ public class Main {
         bodyTypeNameMap.put("Lina","Slim");
 
 
-        // Return the year associated with the country
+        // Return the body type associated with the name
         return bodyTypeNameMap.getOrDefault(name, "no body typegiven"); // default to 0 if country not found
         
     }
+
+    // Map each skin tone with specific name
 
     public static String GetSkinToneForName(String name) {
         
@@ -232,7 +244,7 @@ public class Main {
         skinToneNameMap.put("Lina","White");
 
 
-        // Return the year associated with the country
+        // Return the skin tone associated with the name
         return skinToneNameMap.getOrDefault(name, "no skin tone given"); // default to 0 if country not found
         
     }

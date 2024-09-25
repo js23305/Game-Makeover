@@ -9,5 +9,4 @@ public class StoryCharacter{
     String body_type;
     String skin_tone;
     String clothing_style;
-
 }
