@@ -5,8 +5,8 @@ public class StoryCharacter{
     int hands;
     int legs;
     double height;
-    String hairColor;
-    String eyeColor;
+    String hairColour;
+    String eyeColour;
     String bodyType;
     String skinTone;
     String clothingStyle;
