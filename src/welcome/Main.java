@@ -35,18 +35,18 @@ public class Main {
         newStorycharacter.hands = 2;
         newStorycharacter.legs = 2;
         newStorycharacter.height = GetHeightForName(name);
-        newStorycharacter.hair_color = GetHairColorForName(name);
-        newStorycharacter.eye_color = GetEyeColorForName(name);
-        newStorycharacter.body_type = BodyTypeForName(name);
-        newStorycharacter.skin_tone = GetSkinToneForName(name);
+        newStorycharacter.hairColor = GetHairColorForName(name);
+        newStorycharacter.eyeColor = GetEyeColorForName(name);
+        newStorycharacter.bodyType = BodyTypeForName(name);
+        newStorycharacter.skinTone = GetSkinToneForName(name);
         
         // Set clothing style based on gender
         if (newStorycharacter.gender.equals("Male")) {
-        newStorycharacter.clothing_style = "white shirt and white shorts";}
+        newStorycharacter.clothingStyle = "white shirt and white shorts";}
         else if (newStorycharacter.gender.equals("Female")) {
-        newStorycharacter.clothing_style = "white skirt";}
+        newStorycharacter.clothingStyle = "white skirt";}
         else {
-        newStorycharacter.clothing_style = "white skirt";} // Optional: Handle other cases or defaults
+        newStorycharacter.clothingStyle = "white skirt";} // Optional: Handle other cases or defaults
 
         System.out.println("Name of the character is " + newStorycharacter.name + " and " + newStorycharacter.name);
     }
@@ -163,21 +163,21 @@ public class Main {
 
     public static String GetHairColorForName(String name) {
         
-        Map<String, String> haircolorNameMap = new HashMap<>();
-        haircolorNameMap.put("Alice", "Light Brown");
-        haircolorNameMap.put("Eliza","Burgandy");
-        haircolorNameMap.put("Maya","Black");
-        haircolorNameMap.put("Mayara", "Dark Brown");
-        haircolorNameMap.put("Aman","Black");
-        haircolorNameMap.put("Nikhil","Brown");
-        haircolorNameMap.put("Louise","Pink");
-        haircolorNameMap.put("Alba","Light Brown");
-        haircolorNameMap.put("Jade","Dark Brown");
-        haircolorNameMap.put("Jonas","Light Brown");
-        haircolorNameMap.put("Lina","Brown");
+        Map<String, String> hairColorNameMap = new HashMap<>();
+        hairColorNameMap.put("Alice", "Light Brown");
+        hairColorNameMap.put("Eliza","Burgandy");
+        hairColorNameMap.put("Maya","Black");
+        hairColorNameMap.put("Mayara", "Dark Brown");
+        hairColorNameMap.put("Aman","Black");
+        hairColorNameMap.put("Nikhil","Brown");
+        hairColorNameMap.put("Louise","Pink");
+        hairColorNameMap.put("Alba","Light Brown");
+        hairColorNameMap.put("Jade","Dark Brown");
+        hairColorNameMap.put("Jonas","Light Brown");
+        hairColorNameMap.put("Lina","Brown");
 
         // Return the hair clor associated with the name
-        return haircolorNameMap.getOrDefault(name, "no hair color"); // default to 0 if country not found
+        return hairColorNameMap.getOrDefault(name, "no hair color"); // default to 0 if country not found
         
     }
 
@@ -185,21 +185,21 @@ public class Main {
     
     public static String GetEyeColorForName(String name) {
         
-        Map<String, String> eyecolorNameMap = new HashMap<>();
-        eyecolorNameMap.put("Alice", "Light Brown");
-        eyecolorNameMap.put("Eliza","Blue");
-        eyecolorNameMap.put("Maya","Black");
-        eyecolorNameMap.put("Mayara", "Dark Brown");
-        eyecolorNameMap.put("Aman","Black");
-        eyecolorNameMap.put("Nikhil","Brown");
-        eyecolorNameMap.put("Louise","Green");
-        eyecolorNameMap.put("Alba","Brown");
-        eyecolorNameMap.put("Jade","Dark Brown");
-        eyecolorNameMap.put("Jonas","Light Brown");
-        eyecolorNameMap.put("Lina","Brown");
+        Map<String, String> eyeColorNameMap = new HashMap<>();
+        eyeColorNameMap.put("Alice", "Light Brown");
+        eyeColorNameMap.put("Eliza","Blue");
+        eyeColorNameMap.put("Maya","Black");
+        eyeColorNameMap.put("Mayara", "Dark Brown");
+        eyeColorNameMap.put("Aman","Black");
+        eyeColorNameMap.put("Nikhil","Brown");
+        eyeColorNameMap.put("Louise","Green");
+        eyeColorNameMap.put("Alba","Brown");
+        eyeColorNameMap.put("Jade","Dark Brown");
+        eyeColorNameMap.put("Jonas","Light Brown");
+        eyeColorNameMap.put("Lina","Brown");
 
         // Return the eye color associated with the name
-        return eyecolorNameMap.getOrDefault(name, "no eye color"); // default to 0 if country not found
+        return eyeColorNameMap.getOrDefault(name, "no eye color"); // default to 0 if country not found
         
     }
 
