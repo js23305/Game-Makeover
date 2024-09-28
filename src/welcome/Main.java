@@ -49,6 +49,9 @@ public class Main {
         newStorycharacter.clothingStyle = "white skirt";} // Optional: Handle other cases or defaults
 
         System.out.println("Name of the character is " + newStorycharacter.name + " and " + newStorycharacter.name);
+
+        UserInput.main(args);
+
     }
 
     // Creating function to get random country
