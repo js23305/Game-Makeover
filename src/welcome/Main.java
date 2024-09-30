@@ -49,7 +49,7 @@ public class Main {
         else {
         newStorycharacter.clothingStyle = "white skirt";} // Optional: Handle other cases or defaults
 
-        System.out.println("Name of the character is " + newStorycharacter.name + " and " + newStorycharacter.name);
+        System.out.println("Name of the character is " + newStorycharacter.name );
 
         UserInput.main(args);
 
