@@ -2,6 +2,7 @@ import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class Main {
@@ -101,22 +102,19 @@ public class Main {
     public static String GetNameForCountry(String country) {
         
         Map<String, String> nameCountryMap = new HashMap<>();
-        nameCountryMap.put("United Kingdom" , "Alice");
-        nameCountryMap.put("United Kingdom" , "Eliza");
-        nameCountryMap.put("India" , "Maya");
-        nameCountryMap.put("India" , "Mayara");
-        nameCountryMap.put("India" , "Aman");
-        nameCountryMap.put("India" , "Nikhil");
-        nameCountryMap.put("France" , "Louise");
-        nameCountryMap.put("France" , "Alba");
-        nameCountryMap.put("France" , "Jade");
-        nameCountryMap.put("Germany" , "Jonas");
-        nameCountryMap.put("Germany" , "Lina");
+        nameCountryMap.put("United Kingdom", new ArrayList<>(List.of("Alice", "Eliza")));
+    nameCountryMap.put("India", new ArrayList<>(List.of("Maya", "Mayara", "Aman", "Nikhil")));
+    nameCountryMap.put("France", new ArrayList<>(List.of("Louise", "Alba", "Jade")));
+    nameCountryMap.put("Germany", new ArrayList<>(List.of("Jonas", "Lina")));
+    
+    Random random = new Random();
+    ArrayList<String> names = nameCountryMap.getOrDefault(country, new ArrayList<>());
+   
+    // Return the name  with the country
+    return names.isEmpty() ? "Name not found" : names.get(random.nextInt(names.size()));
+ }
 
-        // Return the name associated with the country
-        return nameCountryMap.getOrDefault(country, "Name not found"); // default to 0 if country not found
-        
-    }
+}
 
     // Map each name with gender
     
