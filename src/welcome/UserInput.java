@@ -57,12 +57,14 @@ public class UserInput {
                String email = emailField.getText();
                String password = passwordField.getText();
 
+               if (username.isEmpty() || email.isEmpty() || password.isEmpty()) {
+                JOptionPane.showMessageDialog(frame, "Please fill out all fields.", "Error", JOptionPane.ERROR_MESSAGE);
+            } else {
+                JOptionPane.showMessageDialog(frame, "Submitted:\nUsername: " + username + "\nEmail: " + email);
+            }
 
-               // Display the username in a message dialog (optional)
-               //  provides feedback to the user, confirming that their input has been received
-               JOptionPane.showMessageDialog(frame, "Username submitted: " + username);
-               
-           }
+
+               }
        });
 
 
